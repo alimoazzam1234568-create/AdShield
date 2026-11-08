@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdShield</title>
+  <link rel="stylesheet" href="popup/popup.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">A</span><div><strong>AdShield</strong><small>Quiet web. Private by default.</small></div></div>
+      <button id="power" class="power-button" aria-label="Toggle AdShield" title="Toggle protection"><span class="power-icon">⏻</span></button>
+    </header>
+
+    <section class="hero-card">
+      <div class="status-line"><span id="status-dot" class="status-dot"></span><span id="status-text">Protection is active</span></div>
+      <p id="site-name" class="site-name">example.com</p>
+      <div class="stats"><div><b id="blocked-count">128</b><span>blocked today</span></div><div><b id="page-blocked">14</b><span>on this page</span></div></div>
+    </section>
+
+    <section class="controls" aria-label="Protection controls">
+      <div class="section-heading"><span>Protection layers</span><span class="local-badge">LOCAL ONLY</span></div>
+      <label class="toggle-row"><span><b>Ad blocking</b><small>Stops display, video and pop-up ads</small></span><input id="enabled" type="checkbox" checked><i></i></label>
+      <label class="toggle-row"><span><b>Privacy shield</b><small>Blocks common trackers and analytics</small></span><input id="privacy" type="checkbox" checked><i></i></label>
+      <label class="toggle-row"><span><b>Cosmetic cleanup</b><small>Removes empty ad spaces on pages</small></span><input id="cosmetic" type="checkbox" checked><i></i></label>
+      <label class="toggle-row"><span><b>Annoyance filter</b><small>Hides newsletter and consent pop-ups</small></span><input id="annoyances" type="checkbox" checked><i></i></label>
+    </section>
+
+    <section class="advanced">
+      <button id="advanced-toggle" class="advanced-toggle" aria-expanded="false"><span>Advanced controls</span><span>⌄</span></button>
+      <div id="advanced-panel" class="advanced-panel" hidden>
+        <label class="toggle-row"><span><b>Strict mode</b><small>Block more third-party requests</small></span><input id="strictMode" type="checkbox"><i></i></label>
+        <button id="reset" class="text-button">Reset blocked count</button>
+      </div>
+    </section>
+
+    <footer><span class="shield-mini">◆</span> No browsing history leaves this device</footer>
+  </main>
+  
+</body>
+</html>

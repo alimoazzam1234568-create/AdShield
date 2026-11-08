@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "AdShield — Clean, Private Browsing",
+  "short_name": "AdShield",
+  "version": "2.0.0",
+  "description": "A Brave-style privacy shield with maintained EasyList coverage, redirect defense, and local-only settings.",
+  "minimum_chrome_version": "101",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open AdShield",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "options_page": "popup/popup.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/cosmetics.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ads_core",
+        "enabled": true,
+        "path": "rules/ads-core.json"
+      },
+      {
+        "id": "privacy_core",
+        "enabled": true,
+        "path": "rules/privacy-core.json"
+      },
+      {
+        "id": "redirect_defense",
+        "enabled": true,
+        "path": "rules/redirect-defense.json"
+      },
+      {
+        "id": "easylist_dnr",
+        "enabled": true,
+        "path": "rules/easylist-dnr.json"
+      },
+      {
+        "id": "easyprivacy_dnr",
+        "enabled": true,
+        "path": "rules/easyprivacy-dnr.json"
+      }
+    ]
+  }
+}

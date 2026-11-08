@@ -1,0 +1,17 @@
+[
+  {"id":201,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||adf.ly^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":202,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||shorte.st^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":203,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||bc.vc^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":204,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||ouo.io^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":205,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||linkvertise.com^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":206,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||onclickads.net^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}},
+  {"id":207,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||popads.net^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}},
+  {"id":208,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||propellerads.com^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}},
+  {"id":209,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||exdynsrv.com^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}},
+  {"id":210,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||go.oclasrv.com^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":211,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||trafficjunky.net^","resourceTypes":["script","sub_frame","xmlhttprequest","image"]}},
+  {"id":212,"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||juicyads.com^","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}},
+  {"id":213,"priority":2,"action":{"type":"redirect","redirect":{"transform":{"removeParams":["utm_source","utm_medium","utm_campaign","utm_term","utm_content","gclid","fbclid","dclid","msclkid","mc_cid","mc_eid"]}}},"condition":{"urlFilter":"||","resourceTypes":["main_frame","sub_frame","xmlhttprequest"]}},
+  {"id":214,"priority":2,"action":{"type":"block"},"condition":{"regexFilter":"^https?://[^/]*(?:popunder|popunder|push-notification|ad-click|clickunder)[^/]*","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest"]}},
+  {"id":215,"priority":2,"action":{"type":"block"},"condition":{"regexFilter":"^https?://[^/]*(?:doubleclick|googlesyndication|adservice|adskeeper|adsterra)[^/]*","resourceTypes":["main_frame","sub_frame","script","xmlhttprequest","image"]}}
+]
